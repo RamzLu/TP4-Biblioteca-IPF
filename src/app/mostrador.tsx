@@ -30,6 +30,7 @@ export default function PantallaMostrador() {
 
   return (
     <FlatList
+      contentInsetAdjustmentBehavior="automatic"
       style={estilos.lista}
       contentContainerStyle={estilos.contenido}
       data={librosConEspera}

@@ -69,6 +69,7 @@ export default function PantallaReservas() {
 
   return (
     <FlatList
+      contentInsetAdjustmentBehavior="automatic"
       style={estilos.lista}
       contentContainerStyle={estilos.contenido}
       data={filas}

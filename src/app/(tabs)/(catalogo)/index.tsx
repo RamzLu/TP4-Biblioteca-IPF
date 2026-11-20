@@ -14,6 +14,7 @@ export default function PantallaCatalogo() {
 
   return (
     <FlatList
+      contentInsetAdjustmentBehavior="automatic"
       style={estilos.lista}
       contentContainerStyle={estilos.contenido}
       data={libros}

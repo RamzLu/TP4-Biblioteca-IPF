@@ -33,6 +33,7 @@ export default function PantallaBuscar() {
         style={estilos.campo}
       />
       <FlatList
+        contentInsetAdjustmentBehavior="automatic"
         data={resultados}
         keyExtractor={(libro) => libro.isbn}
         renderItem={({ item }) => <FilaLibro libro={item} />}

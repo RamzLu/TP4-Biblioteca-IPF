@@ -43,7 +43,11 @@ export default function PantallaDetalle() {
   const lugar = posicion(libro.isbn);
 
   return (
-    <ScrollView style={estilos.pantalla} contentContainerStyle={estilos.contenido}>
+    <ScrollView
+      contentInsetAdjustmentBehavior="automatic"
+      style={estilos.pantalla}
+      contentContainerStyle={estilos.contenido}
+    >
       <Stack.Screen options={{ title: libro.titulo }} />
       <Text style={estilos.titulo} accessibilityRole="header">
         {libro.titulo}
