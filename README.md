@@ -119,7 +119,7 @@ Se declara en `android.blockedPermissions` para que ninguno de estos permisos qu
 | `android.permission.WRITE_EXTERNAL_STORAGE` | La app no guarda archivos en el teléfono. |
 | `android.permission.SYSTEM_ALERT_WINDOW` | La app no dibuja encima de otras aplicaciones. |
 
-Quedan declarados solo los que la app usa: `CAMERA` y `POST_NOTIFICATIONS`, además de `RECEIVE_BOOT_COMPLETED`, que agrega `expo-notifications` para conservar las notificaciones programadas si se reinicia el teléfono.
+Con `npx expo prebuild` el manifiesto queda con `CAMERA`, `INTERNET` y `VIBRATE` (estos dos los agrega Expo por defecto), y los cuatro de arriba marcados para eliminarse. Los permisos de `expo-notifications` (como `POST_NOTIFICATIONS`) se fusionan al compilar la app.
 
 ## Deep links de prueba
 
