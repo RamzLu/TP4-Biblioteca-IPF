@@ -1,18 +1,21 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from 'expo-router';
-import * as SplashScreen from 'expo-splash-screen';
-import { useColorScheme } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
 
-import { AnimatedSplashOverlay } from '@/components/animated-icon';
-import AppTabs from '@/components/app-tabs';
+import { NavegacionRaiz } from '../components/NavegacionRaiz';
+import { ProveedorBiblioteca } from '../context/BibliotecaContext';
+import { configurarNotificaciones } from '../lib/notificaciones';
 
-SplashScreen.preventAutoHideAsync();
+// Con anchor en (tabs), un deep link a /buscar deja las pestañas debajo en la pila.
+export const unstable_settings = {
+  anchor: '(tabs)',
+};
 
-export default function TabLayout() {
-  const colorScheme = useColorScheme();
+configurarNotificaciones();
+
+export default function LayoutRaiz() {
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <AnimatedSplashOverlay />
-      <AppTabs />
-    </ThemeProvider>
+    <ProveedorBiblioteca>
+      <StatusBar style="dark" />
+      <NavegacionRaiz />
+    </ProveedorBiblioteca>
   );
 }
