@@ -2,6 +2,7 @@ import { colores, pesosTexto } from './tema';
 
 export const opcionesPila = {
   headerTintColor: colores.primario,
+  headerBackButtonDisplayMode: 'minimal',
   headerTitleStyle: { fontWeight: pesosTexto.fuerte, color: colores.texto },
   contentStyle: { backgroundColor: colores.fondo },
 } as const;
